@@ -4,4 +4,7 @@ public class AVLTree <T extends Comparable<T>>{
     public AVLTree(){
         this.root=null;                      
     }
+    public boolean isEmpty(){
+        return this.root == null;
+    }
 }
