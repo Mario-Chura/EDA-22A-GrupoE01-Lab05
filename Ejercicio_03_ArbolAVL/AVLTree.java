@@ -110,6 +110,20 @@ public class AVLTree <T extends Comparable<T>>{
         node = son;
         return node;
     }
+    protected Node<T> searchNode(T x,Node<T> current) throws ItemNotFound{
+        if(current == null)
+            return null;
+        else{
+            int resC = current.getData().compareTo(x);
+            if(resC<0)
+                return searchNode(x, current.getRightNode());
+            else if(resC>0)
+                return searchNode(x, current.getLeftNode());
+            else 
+                return current;
+        }
+    
+    }
 
     
 
