@@ -69,6 +69,29 @@ public class AVLTree <T extends Comparable<T>>{
         }
         return node;
     }
+    private Node<T> balanceToRight(Node<T> node){
+        Node<T> son = node.getLeftNode(); //trabajo con el hijo izquierdo
+        switch(son.getBalanceFactor()){
+            case 0:
+            case -1:node.setBalanceFactor(0);
+                    son.setBalanceFactor(0);
+                    System.out.println("Rotacion Simple Derecha");
+                    node = rotateSR(node);
+                    break;
+            case 1: Node<T> grandson = son.getRightNode();
+                    switch(grandson.getBalanceFactor()){
+                        case -1 : node.setBalanceFactor(0);son.setBalanceFactor(1); break;
+                        case 0 : node.setBalanceFactor(0);son.setBalanceFactor(0); break;
+                        case 1 : node.setBalanceFactor(-1);son.setBalanceFactor(0); break;
+                    }
+                    grandson.setBalanceFactor(0);
+                    System.out.println("Rotacion Doble Derecha");
+                    node.setLeftNode(rotateSL(son));
+                    node = rotateSR(node);
+                    break;
+        }
+        return node;
+    }
     
 
 }
