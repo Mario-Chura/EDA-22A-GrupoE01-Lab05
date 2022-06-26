@@ -92,6 +92,13 @@ public class AVLTree <T extends Comparable<T>>{
         }
         return node;
     }
+    private Node<T> rotateSL(Node<T> node){
+        Node<T> son = node.getRightNode();
+        node.setRightNode(son.getLeftNode());
+        son.setLeftNode(node);
+        node = son;
+        return node;
+    }
     
 
 }
