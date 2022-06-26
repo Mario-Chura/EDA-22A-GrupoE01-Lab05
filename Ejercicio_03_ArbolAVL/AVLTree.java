@@ -113,8 +113,7 @@ public class AVLTree <T extends Comparable<T>>{
     public T search(T x) throws ItemNotFound{
         Node<T> res = searchNode(x , this.root);
         if(res == null)
-            throw new ItemNotFound("El dato "+ x +" no esta");
-        //return "El elemento "+res.data.toString()+" ha sido encontrado";        
+            throw new ItemNotFound("El dato "+ x +" no esta");      
         return res.getData();
     }
     protected Node<T> searchNode(T x,Node<T> current) throws ItemNotFound{
@@ -130,7 +129,7 @@ public class AVLTree <T extends Comparable<T>>{
                 return current;
         }
     }
-    private String inOrden(Node current){
+    private String inOrden(Node<T> current){
         String str="";
         if(current.getLeftNode() != null) str += inOrden(current.getLeftNode());
         str += current.getData()+"["+current.getBalanceFactor()+"], ";
