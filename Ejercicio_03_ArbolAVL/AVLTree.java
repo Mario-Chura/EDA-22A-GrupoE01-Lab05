@@ -7,6 +7,10 @@ public class AVLTree <T extends Comparable<T>>{
     public boolean isEmpty(){
         return this.root == null;
     }
+    public void insert(T x) throws ItemDuplicated{
+        this.height = false;
+        this.root = insertRec(x, this.root);
+    }
     private Node<T> insertRec(T x, Node<T> current) throws ItemDuplicated{
         Node<T> res = current;
         if(current == null){
@@ -106,6 +110,7 @@ public class AVLTree <T extends Comparable<T>>{
         node = son;
         return node;
     }
+
     
 
 }
