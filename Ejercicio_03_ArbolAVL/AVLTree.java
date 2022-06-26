@@ -129,7 +129,13 @@ public class AVLTree <T extends Comparable<T>>{
             else 
                 return current;
         }
-    
+    }
+    private String inOrden(Node current){
+        String str="";
+        if(current.getLeftNode() != null) str += inOrden(current.getLeftNode());
+        str += current.getData()+"["+current.getBalanceFactor()+"], ";
+        if(current.getRightNode() != null) str += inOrden(current.getRightNode());
+        return str;
     }
 
     
