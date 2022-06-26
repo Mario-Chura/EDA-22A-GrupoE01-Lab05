@@ -110,6 +110,13 @@ public class AVLTree <T extends Comparable<T>>{
         node = son;
         return node;
     }
+    public T search(T x) throws ItemNotFound{
+        Node<T> res = searchNode(x , this.root);
+        if(res == null)
+            throw new ItemNotFound("El dato "+ x +" no esta");
+        //return "El elemento "+res.data.toString()+" ha sido encontrado";        
+        return res.getData();
+    }
     protected Node<T> searchNode(T x,Node<T> current) throws ItemNotFound{
         if(current == null)
             return null;
