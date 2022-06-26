@@ -137,6 +137,12 @@ public class AVLTree <T extends Comparable<T>>{
         if(current.getRightNode() != null) str += inOrden(current.getRightNode());
         return str;
     }
+    public String toString(){
+        if(isEmpty())
+            return "Arbol vacio...";
+        return inOrden(this.root); 
+        
+    }
 
     
 
