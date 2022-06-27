@@ -66,10 +66,19 @@
 	- Paso 1 realizaremos operaciones de agregación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
 		-	Se inserta el nodo 100 como la raíz.
 		-	Se inserta el nodo 200, dado a que 200 > 100, lo insertamos en el subárbol derecho.
-		-	Se inserta el nodo 300, dado a que 300 > 200, lo insertamos en el subárbol derecho.
-		-	Como el factor de equilibrio de la raíz es +2 realizamos un giro hacia la izquierda.
+		-	Se inserta el nodo 300, dado a que 300 > 100 y 300 > 200, lo insertamos en el subárbol derecho.
+		-	Como el factor de equilibrio de la raíz es +2 realizamos una rotación hacia la izquierda.
 		-	Se inserta el nodo 400, dado a que 400>200 y 400>300, los insertamos a la derecha de 300.
-		![imagen](Imagenes/1.Movimientos1.jpg)
+
+		![imagen](Imagenes/Imagen1.jpg)
+		
+		-	Se inserta el nodo 500, dado a que 500>200, 500>300 y 500>400, lo insertamos a la derecha de 400.
+		-	Como el factor de equilibrio del nodo 300 es +2 realizamos una rotación hacia la izquierda.
+		-	Se inserta el nodo 50, dado que 50<200 y 50<100, lo insertamos a la izquierda de 100
+		-	Se inserta el nodo 25, dado que 25<200, 25<100, 25<50, lo insertamos a la izquierda de 50.
+		
+		![imagen](Imagenes/Imagens2.jpg)
+
 
 	-  Paso 2 realizaremos la eliminación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
 3.  Ejercicio 3 : Árbol AVL
