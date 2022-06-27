@@ -68,7 +68,7 @@
 		-	Se inserta el nodo 200, dado a que 200 > 100, lo insertamos en el subárbol derecho.
 		-	Se inserta el nodo 300, dado a que 300 > 200, lo insertamos en el subárbol derecho.
 		-	Como el factor de equilibrio de la raíz es +2 realizamos un giro hacia la izquierda.
-		-	Se inserta el nodo 400, dado a que 400>100 , 400>200 y 400>300, los insertamos a la derecha de 300.
+		-	Se inserta el nodo 400, dado a que 400>200 y 400>300, los insertamos a la derecha de 300.
 		![imagen](Imagenes/1.Movimientos1.jpg)
 
 	-  Paso 2 realizaremos la eliminación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
