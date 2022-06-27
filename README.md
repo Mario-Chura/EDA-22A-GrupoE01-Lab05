@@ -64,6 +64,12 @@
 2.  Ejercicio 2 : Operaciones de árbol AVL
 - Para este ejercicio tienes que escribir el paso a paso del desarrollo de cada operación donde se muestra gráficamente el estado del árbol así como el factor de equilibrio para cada nodo y el tipo de operación que se está realizando, es decir, inserción, eliminación, rotación.
 	- Paso 1 realizaremos operaciones de agregación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
+		-	Se inserta el nodo 100 como la raíz.
+		-	Se inserta el nodo 200, dado a que 200 > 100, lo insertamos en el subárbol derecho.
+		-	Se inserta el nodo 300, dado a que 300 > 200, lo insertamos en el subárbol derecho.
+		-	Como el factor de equilibrio de la raíz es +2 realizamos un giro hacia la izquierda.
+		![imagen](imagenes/1.Movimiento1.jpg)
+
 	-  Paso 2 realizaremos la eliminación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
 3.  Ejercicio 3 : Árbol AVL
 	- Procedimiento
