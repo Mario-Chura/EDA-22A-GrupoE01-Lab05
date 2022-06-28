@@ -138,58 +138,52 @@
 		
 		![imagen](Imagenes/Img10.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 100 caso III: El nodo 100 tiene dos hijos. En este caso, encontramos el sucesor de 100, el nodo más a la izquierda en el subárbol derecho, el cual es el menor de todos, que lo reemplazará. El sucesor es la hoja 120 con el cual efectuaremos el intercambio.
 		
 		![imagen](Imagenes/Img11.jpg)
 
-		-	1
-		-	2
+		-	Eliminando nodo 200 caso III: El nodo 200 tiene dos hijos. En este caso, encontramos el sucesor de 200, en este caso podemos escoger cualquiera de los dos hijos para ser padre, nosotros escogeremos en nodo 300 que reemplazara a 200.
 		
 		![imagen](Imagenes/Img12.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 300 caso II: El nodo 300 solo tiene un hijo, el nodo 190 por eso el será su reemplazo.
 		
 		![imagen](Imagenes/Img13.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 400 caso II: El nodo 400 solo tiene un hijo, el nodo 500, por eso el será su reemplazo.
 		
 		![imagen](Imagenes/Img14.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 500 caso I: El nodo 500 es una hoja por lo que solo lo quitamos, como el factor de equilibrio del nodo 375 a raíz de esta eliminación toma el valor de -2, realizamos un giro hacia la derecha para tener de nuevo equilibrio en nuestro árbol AVL.
 		
 		![imagen](Imagenes/Img15.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 50 caso II: El nodo 50 solo tiene como hijo el nodo 25, este nodo será su reemplazo.
 		
 		![imagen](Imagenes/Img16.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 25 caso I: El nodo 25 es una hoja por lo que solo lo quitamos, como el factor de equilibrio del nodo 120 a raíz de esta eliminación toma el valor de +2, realizamos un giro hacia la izquierda para tener de nuevo equilibrio en nuestro árbol AVL.
 		
 		![imagen](Imagenes/Img17.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 350 caso III: El nodo 350 tiene dos hijos. En este caso, encontramos el sucesor de 350, el nodo más a la izquierda en el subárbol derecho, el cual es el menor de todos, que lo reemplazará. El sucesor es la hoja 355 con el cual efectuaremos el intercambio.
 		
 		![imagen](Imagenes/Img18.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 375 caso I: El nodo 375 es una hoja por lo que solo lo quitamos, como el factor de equilibrio del nodo 355 a raíz de esta eliminación toma el valor de -2, realizamos un giro hacia la derecha para tener de nuevo equilibrio en nuestro árbol AVL
 		
 		![imagen](Imagenes/Img19.jpg)
 		
-		-	1
-		-	2
+		-	Eliminando nodo 360 caso I: El nodo 360 es una hoja por lo que solo lo quitamos.
+		-	Eliminando nodo 355 caso II: El nodo 355 solo tiene como hijo el nodo 190 este nodo será su reemplazo. 
+
 		
 		![imagen](Imagenes/Img20.jpg)
 	
-		-	1
-		-	2
+		-	Eliminando nodo 150 caso I: El nodo 150 es una hoja por lo que solo lo quitamos.
+		-	Eliminando nodo 175 caso III: El nodo 175 tiene dos hijos. En este caso, encontramos el sucesor de 175, en este caso podemos escoger cualquiera de los dos hijos para ser padre, nosotros escogeremos en nodo 190 que reemplazara a 175.
+		-	Eliminando nodo 120 caso I: El nodo 120 es una hoja por lo que solo lo quitamos.
+
 		
 		![imagen](Imagenes/Img21.jpg)
 		
@@ -208,11 +202,10 @@
 
 ### III.	CONCLUSIONES
 #
--Conclusion 1 <br>
+-Los árboles binarios son eficientes mientras sean pequeños, pero a medida que estos crecen se hacen ineficientes porque para que funcione serán necesarios condiciones de balanceo, pero si el balanceo es perfecto será muy costoso mantenerlo, es por ello que los arboles AVL nos da ese balanceo con tolerancia +-1 en su factor de equilibrio de modo que su balanceo es poco costoso dándonos un orden en sus operaciones de O(log n). <br>
 -Conclusion 2 <br>
 -Conclusion 3 <br>
--Conclusion 4 <br>
--Conclusion 5 <br>
+
 #
 <div align="center"><h2>  RETROALIMENTACIÓN GENERAL </h2></div> <br>
 
