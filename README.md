@@ -94,7 +94,7 @@
 		-	4.
 
 		
-		![imagen](Imagenes/Img4.jpg)
+		![imagen](Imagenes/Imgs4.jpg)
 
 		-	1
 		-	2
