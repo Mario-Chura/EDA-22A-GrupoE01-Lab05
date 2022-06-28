@@ -81,13 +81,13 @@
 		
 		![imagen](Imagenes/Img2.jpg)
 
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	Como el factor de equilibro del nodo 100 es -2 realizamos una rotación a la derecha
+		-	Se inserta el nodo 350, dado que 350>200, 350<400 y 350>300, lo insertamos a la derecha del nodo 300.
+		-	Se inserta el nodo 375, dado que 375>200, 375<400, 375>300 y 375>350 , lo insertamos a la derecha del nodo 375.
 
-		
+
 		![imagen](Imagenes/Img3.jpg)
+		
 		-	1
 		-	2
 		-	3
