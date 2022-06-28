@@ -70,17 +70,137 @@
 		-	Como el factor de equilibrio de la raíz es +2 realizamos una rotación hacia la izquierda.
 		-	Se inserta el nodo 400, dado a que 400>200 y 400>300, los insertamos a la derecha de 300.
 
-		![imagen](Imagenes/Imagen1.jpg)
+
+		![imagen](Imagenes/Img1.jpg)
 		
 		-	Se inserta el nodo 500, dado a que 500>200, 500>300 y 500>400, lo insertamos a la derecha de 400.
 		-	Como el factor de equilibrio del nodo 300 es +2 realizamos una rotación hacia la izquierda.
 		-	Se inserta el nodo 50, dado que 50<200 y 50<100, lo insertamos a la izquierda de 100
 		-	Se inserta el nodo 25, dado que 25<200, 25<100, 25<50, lo insertamos a la izquierda de 50.
-		
-		![imagen](Imagenes/Imagen2.jpg)
 
+		
+		![imagen](Imagenes/Img2.jpg)
+
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img3.jpg)
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img4.jpg)
+
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img5.jpg)
+		
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img6.jpg)
+		
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img7.jpg)
+		
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img8.jpg)
+		
+		-	1
+		-	2
+		-	3
+		-	4.
+
+		
+		![imagen](Imagenes/Img9.jpg)
+		
 
 	-  Paso 2 realizaremos la eliminación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
+
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img10.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img11.jpg)
+
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img12.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img13.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img14.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img15.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img16.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img17.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img18.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img19.jpg)
+		
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img20.jpg)
+	
+		-	1
+		-	2
+		
+		![imagen](Imagenes/Img21.jpg)
+		
+#
+
 3.  Ejercicio 3 : Árbol AVL
 	- Procedimiento
 	
