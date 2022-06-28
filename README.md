@@ -83,23 +83,22 @@
 
 		-	Como el factor de equilibro del nodo 100 es -2 realizamos una rotación a la derecha
 		-	Se inserta el nodo 350, dado que 350>200, 350<400 y 350>300, lo insertamos a la derecha del nodo 300.
-		-	Se inserta el nodo 375, dado que 375>200, 375<400, 375>300 y 375>350 , lo insertamos a la derecha del nodo 375.
+		-	Se inserta el nodo 375, dado que 375>200, 375<400, 375>300 y 375>350 , lo insertamos a la derecha del nodo 350.
 
 
 		![imagen](Imagenes/Img3.jpg)
 		
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	En la inserción anterior el factor de equilibrio del nodo 300 era de +2 por ello realizamos una rotación hacia la izquierda.
+		-	Se inserta el nodo 360, dado que 360>200, 360<400, 360>350 y 360<375, lo insertamos a la izquierda del nodo 375.
+		-	Como el factor de equilibrio del nodo 400 es -2 primero realizamos una rotación hacia la izquierda, pero ahora tenemos en nodo 375 con un factor de equilibrio de +2.
 
-		
-		![imagen](Imagenes/Img4.jpg)
 
-		-	1
-		-	2
-		-	3
-		-	4.
+		![imagen](Imagenes/Imgs4.jpg)
+
+		-	Para llegar al equilibrio en el árbol AVL, ahora realizamos una rotación hacia la derecha y así llegamos al equilibrio.
+		-	Se inserta el nodo 355, dado que 355>200, 355<375, 355>350 y 355<375, lo insertamos a la izquierda del nodo 375.
+		-	Como el factor de equilibrio del nodo 400 es -2 realizamos una rotación a la izquierda, pero ahora el factor de equilibrio del nodo 375 es -2 por lo que vamos a realizar una rotación más. 
+
 
 		
 		![imagen](Imagenes/Img5.jpg)
