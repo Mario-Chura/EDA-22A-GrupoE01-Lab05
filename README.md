@@ -96,41 +96,37 @@
 		![imagen](Imagenes/Imgs4.jpg)
 
 		-	Para llegar al equilibrio en el árbol AVL, ahora realizamos una rotación hacia la derecha y así llegamos al equilibrio.
-		-	Se inserta el nodo 355, dado que 355>200, 355<375, 355>350 y 355<375, lo insertamos a la izquierda del nodo 375.
-		-	Como el factor de equilibrio del nodo 400 es -2 realizamos una rotación a la izquierda, pero ahora el factor de equilibrio del nodo 375 es -2 por lo que vamos a realizar una rotación más. 
+		-	Se inserta el nodo 355, dado que 355>200, 355<375, 355>350 y 355<360, lo insertamos a la izquierda del nodo 360.
+		-	Como el factor de equilibrio del nodo 200 es +2 realizamos una rotación a la derecha, pero aun el factor de equilibrio del nodo 200 es +2, así que necesitaremos hacer otra rotación.
+
 
 
 		
 		![imagen](Imagenes/Img5.jpg)
 		
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	Para llegar al equilibrio realizamos una rotación a la izquierda, donde el nodo 350 será nuestra nueva raíz.
+		-	Se inserta el nodo 150, dado que 150<350, 150<200, 150>50 y 150>100, lo insertamos a la derecha del nodo 100.
+		-	Como el factor de equilibrio del nodo 200 es -2, primero realizamos una rotación hacia izquierda, pero aun su factor de equilibrio es de -2.
+
 
 		
 		![imagen](Imagenes/Img6.jpg)
 		
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	Para equilibrar nuestro árbol realizamos una rotación hacia la derecha y logramos el equilibrio.
+		-	Se inserta el nodo 175, dado que 175<350, 175>100, 175<200 y 175>150, lo insertamos a la derecha del nodo 150.
+
 
 		
 		![imagen](Imagenes/Img7.jpg)
 		
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	Se inserta el nodo 120, dado que 120<350, 120>100, 120<200 y 120<150, lo insertamos a la izquierda del nodo 120.
+		-	Se inserta el nodo 190, dado que 190<350, 190>100, 190<200, 190>150 y 190>175, lo insertamos a la derecha del nodo 175.
+
 
 		
 		![imagen](Imagenes/Img8.jpg)
 		
-		-	1
-		-	2
-		-	3
-		-	4.
+		-	Dado a que el factor de equilibrio del nodo 200 es -2 después de la inserción del nodo 190, realizamos primero una rotación hacia la izquierda y por último una rotación hacia la derecha y así logramos el equilibrio en nuestro árbol AVL.
 
 		
 		![imagen](Imagenes/Img9.jpg)
@@ -138,8 +134,7 @@
 
 	-  Paso 2 realizaremos la eliminación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
 
-		-	1
-		-	2
+		-	Realizaremos nuestras operaciones de eliminación de nodos a partir de nuestro árbol AVL generado anteriormente el cual es el que se muestra en la siguiente imagen:
 		
 		![imagen](Imagenes/Img10.jpg)
 		
