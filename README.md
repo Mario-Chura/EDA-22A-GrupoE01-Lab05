@@ -224,7 +224,7 @@
 
 <div align="center"><h2> REFERENCIAS Y BIBLIOGRAFÍA </h2></div> <br>
 
--   1
--   2
--   3
--   4
+-   https://www.youtube.com/watch?v=r72a5MxQaJQ&ab_channel=DANYFU
+-   https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+-   https://www.youtube.com/watch?v=Qexq1k8LB6k&ab_channel=makigas%3Atutorialesdeprogramaci%C3%B3n
+-   https://estructurasite.wordpress.com/arbol/
