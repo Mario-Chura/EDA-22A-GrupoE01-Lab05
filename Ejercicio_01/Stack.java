@@ -18,7 +18,10 @@ public class Stack <T> {
     }
     public T peek(){
         if (root!=null)
-            return root.getdato();[(])
+            return root.getdato();
         return null;
+    }
+    public boolean isEmpty(){
+        return root == null;
     }
 }
