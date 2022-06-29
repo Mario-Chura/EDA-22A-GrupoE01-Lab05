@@ -61,6 +61,11 @@
 #	
 1.  Ejercicio 1 : Corchetes equilibrados
 	- Procedimiento
+	El metodo isBalance recibe unicamente una cadena compuesta de (,{,[,],},) esta cadena es procesada por un ciclo for , cada simbolo es almacenado en la variable "simbolo" de tipo char ; despues pasa por una serie de if .
+	El primer if verifica si es algun simbolo de apertura, si lo es , se pushea a una pila previamente creada ; por otro lado si es un simbolo de cerradura es procesado en un else if , este bloque primero verifica si la pila esta vacia con el fin de que este simbolo de cerradura tenga su simbolo de apertura correspondiente , tambien se verifica que el tope de la pila sea distinto del simbolo de apertura en ambos casos se retorna la cadena "NO" esto se extiende para los simbolos : 
+	},],) 
+	Finalmente si no a ocurrido ninguna excepcion en el ciclo for significa que la pila esta vacia y por lo tanto la cadena ingresada es valida asi retornando un "SI" .
+
 2.  Ejercicio 2 : Operaciones de árbol AVL
 - Para este ejercicio tienes que escribir el paso a paso del desarrollo de cada operación donde se muestra gráficamente el estado del árbol así como el factor de equilibrio para cada nodo y el tipo de operación que se está realizando, es decir, inserción, eliminación, rotación.
 	- Paso 1 realizaremos operaciones de agregación de los siguientes valores: 100 - 200 - 300 - 400 - 500 - 50 - 25 - 350 - 375 - 360 - 355 - 150 - 175 - 120 - 190.
