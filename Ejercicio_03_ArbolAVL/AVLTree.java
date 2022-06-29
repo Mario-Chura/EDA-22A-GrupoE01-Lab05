@@ -178,6 +178,13 @@ public class AVLTree <T extends Comparable<T>>{
         }
         return actual;
     }
+    private Node<T> getNodoMaximo(Node<T> node) {
+        Node<T> current = node;        
+        while (current.getRightNode() != null){
+           current = current.getRightNode();
+        }        
+        return current;
+    }
     private String inOrden(Node<T> current){
         String str="";
         if(current.getLeftNode() != null) str += inOrden(current.getLeftNode());
