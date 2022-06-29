@@ -297,9 +297,9 @@
 
 ### III.	CONCLUSIONES
 #
--Los árboles binarios son eficientes mientras sean pequeños, pero a medida que estos crecen se hacen ineficientes porque para que funcione serán necesarios condiciones de balanceo, pero si el balanceo es perfecto será muy costoso mantenerlo, es por ello que los arboles AVL nos da ese balanceo con tolerancia +-1 en su factor de equilibrio de modo que su balanceo es poco costoso dándonos un orden en sus operaciones de O(log n). <br>
--Conclusion 2 <br>
--Conclusion 3 <br>
+- Los árboles binarios son eficientes mientras sean pequeños, pero a medida que estos crecen se hacen ineficientes porque para que funcione serán necesarios condiciones de balanceo, pero si el balanceo es perfecto será muy costoso mantenerlo, es por ello que los arboles AVL nos da ese balanceo con tolerancia +-1 en su factor de equilibrio de modo que su balanceo es poco costoso dándonos un orden en sus operaciones de O(log n). <br>
+- Los árboles AVL, además de cumplir con la propiedad de orden de los BST, cumple el equilibrio con sus nodos las alturas de sus subárboles izquierdo y derecho no difieren en más de 1, Esto permite que su coste de operación sea O(log2 n), porque el equilibrio se basa en reequilibrados locales, de modo que no es necesario explorar todo el árbol después de cada inserción. Por cumplir con esta propiedades consideramos que son muy eficientes al trabajar con ellos<br>
+- Conclusion 3 <br>
 
 #
 <div align="center"><h2>  RETROALIMENTACIÓN GENERAL </h2></div> <br>
