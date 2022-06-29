@@ -190,9 +190,104 @@
 #
 
 3.  Ejercicio 3 : Árbol AVL
-	- Procedimiento
+- En este ejercicio se implemento la clase Node para un AVL, que tiene los mismo que un nodo para BST, con la diferencia que se agrega el factor de balance
+	```sh
+	public class Node<T> {
+    	 private T data;
+    	 private int balanceFactor;
+    	 private Node<T> rightNode;
+    	 private Node<T> leftNode;
+    	 /*.../*
 	
-   
+ 	```
+- En la clase AVLTree se implemento los atributos root(raiz) y height(altura) este ultimo un booleno para el desarrollo de la insercion.
+	```sh
+	 protected Node<T> root;
+     private boolean height;
+	```
+- Para la insercion se implemento dos clases insert una publica manejada por el usuario y otra protegida para el desarrollo del metodo
+- En el metodo insert protected(protegido) se realizan condicionales con el nodo ingresado, si es null simplemente se devuelve y se crea el nodo
+	```sh
+	if(current == null){
+            this.height = true;
+            res = new Node(x);
+        }
+	```
+- En otro caso creamos una variable para realizar comparacion entre el data del nodo y el valor a insertar, se realiza de esta manera porque se esta trabajando con clases genericas.
+	```sh
+	int resC= current.getData().compareTo(x);
+	```
+- Si es es cero el no ya fue insertado, si es menor a cero, se trabaja con el nodo derecho. Y se llama de vuelta al mismo metodo insert, enviando al valor x a insertar y el nodo derecho.
+	```sh
+	res.setRightNode(insertRec(x, current.getRightNode()));
+	```
+- Luego de esto se realiza un condicional con el atributo height, si es verdadero se realiza un switch con el factor de balance de "res" nuestro valor auxiliar, para determinar segun sea el caso el cabio de balance de la variable "res" y cambiar el valor del atributo "height" a false o true segun el caso.
+	```sh
+	if(this.height){
+                    switch(res.getBalanceFactor()){
+                        case -1: res.setBalanceFactor(0); this.height=false; break;
+                        case 0: res.setBalanceFactor(1);  this.height=true; break;
+                        case 1: //caso factor de balance 2
+                                res = balanceToLeft(res); //se realiza el balanceo
+                                this.height=false;
+                                break;
+                    }
+        }
+	```
+- En caso que no cumpla el condicional significaria trabajar con el nodo izquierdo, se realiza lo mismo que en el caso anterior(nodo derecho), cambiando los casos en la sentencia switch
+	```sh
+	switch(res.getBalanceFactor()){
+                        case 1: res.setBalanceFactor(0); this.height=false; break;
+                        case 0: res.setBalanceFactor(-1); this.height=true; break;
+                        case -1: //caso factor de balance -2
+                                res = balanceToRight(res); //se realiza el balanceo
+                                this.height=false; break;
+        }
+	```
+- Los metodos adicionales que se implementaron son balanceToLeft y balanceToRight, que nos sirven para realizar las rotaciones simple o doble, a la izquierda o derecha segun el caso.
+- En estos metodos se trabaja con hijo y nieto del nodo(derecho o izquierdo segun el caso), en la sentencia switch con el factor de balance del hijo del nodo. Caso 0 o 1 se realiza la rotacion simple izquierda, caso -1 rotacion doble izquierda
+	```sh
+	switch(son.getBalanceFactor()){
+            case 0:
+            case 1: node.setBalanceFactor(0);
+                    son.setBalanceFactor(0);
+                    System.out.println("Rotacion Simple Izquierda");
+                    node = rotateSL(node); break;                    
+            case -1: Node<T> grandson = son.getLeftNode();
+                    switch(grandson.getBalanceFactor()){
+                        case -1 :node.setBalanceFactor(0); son.setBalanceFactor(1);break;
+                        case 0 : node.setBalanceFactor(0); son.setBalanceFactor(0);break;
+                        case 1 : node.setBalanceFactor(-1); son.setBalanceFactor(0);break;
+                    }
+                    grandson.setBalanceFactor(0);
+                    System.out.println("Rotacion Doble Izquierda");
+                    node.setRightNode(rotateSR(son)); 
+                    node = rotateSL(node);                                       
+                    break;
+        }
+	```
+- Se realiza lo mismo para el balanceo a la derecha, cambiando los casos del switch con el factor de balance del hijo del nodo. Caso 0 o -1 se realiza la rotacion simple Derecha, caso 1 rotacion doble Derecha
+- Adicionalmente para realizar las rotaciones izquierda y derecha se implementaron estos metodos
+	```sh
+	//Rotacion derecha
+	private Node<T> rotateSL(Node<T> node){
+        Node<T> son = node.getRightNode();
+        node.setRightNode(son.getLeftNode());
+        son.setLeftNode(node);
+        node = son;
+        return node;
+    }
+	```
+- Simetricamente se realiza para la rotacion izquierda
+- Para la Busqueda, no es diferente a la busqueda en BST porque simplemente se realiza una consulta se devuelve el dato si se encuentra y si no se devuelve no encontrado
+- Cuenta igualmente con un metodo publico y otro protegido donde se realiza el desarrollo, se realiza con condicionales y usando recursividad en la busqueda para finalmente retornar el dato buscado
+	```sh
+	int resC = current.getData().compareTo(x);
+        if(resC<0)	return searchNode(x, current.getRightNode());
+        else if(resC>0)	return searchNode(x, current.getLeftNode());
+        else	return current;
+	```
+- Para la mostrar en consola se implemento un metodo para el recorrido del arbol AVL en inOrden, y se uso en el metodo toString
 #
 
 ### II.	SOLUCIÓN DEL CUESTIONARIO
