@@ -1,3 +1,5 @@
+package Ejercicio_01;
+
 public class Stack <T> {
     private Nodo <T> root;
     public T pop(){
@@ -16,7 +18,7 @@ public class Stack <T> {
     }
     public T peek(){
         if (root!=null)
-            return root.getdato();
+            return root.getdato();[(])
         return null;
     }
 }
