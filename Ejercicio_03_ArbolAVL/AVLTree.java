@@ -129,6 +129,51 @@ public class AVLTree <T extends Comparable<T>>{
                 return current;
         }
     }
+    //Metodo Protegido (remove)
+    protected Node<T> removeAVL(Node<T> actual,T x) throws ItemNotFound{        
+        //si es nulo, no existe el dato
+        if(actual == null){
+            throw new ItemNotFound(x + " no esta");
+        }
+        //comparar el dato x con el dato del nodo
+        int resC = x.compareTo(actual.getData());
+        //menor a cero trabajamos por la izquierda
+        if(resC < 0){
+            actual.setLeftNode(removeAVL(actual.getLeftNode(), x)); //recursividad
+        }else if(resC > 0){ //mayor a cero trabajamos por la derecha
+            actual.setRightNode(removeAVL(actual.getRightNode(), x));//recursividad
+        }else{
+            //El nodo es igual a la clave, se elimina
+            //Nodo con un unico hijo o es hoja
+            if ((actual.getLeftNode() == null) || (actual.getRightNode() == null)){
+                Node<T> temp = null;
+                if (temp == actual.getLeftNode()) {
+                    temp = actual.getRightNode();
+                }else {
+                    temp = actual.getLeftNode();
+                }
+ 
+                // Caso que no tiene hijos
+                if (temp == null) {
+                    actual = null;//Se elimina dejandolo en null
+                }else{
+                    //Caso con un hijo
+                    actual = temp;//Elimina el valor actual reemplazandolo por su hijo
+                }
+            }
+            else {
+                //Nodo con dos hijos, se busca el predecesor
+                Node<T> temp = getNodoMaximo(actual.getLeftNode());
+                
+                //Se copia el dato del predecesor
+                actual.setData(temp.getData());
+ 
+                //Se elimina el predecesor
+                actual.setLeftNode(removeAVL(actual.getLeftNode(),temp.getData()));
+            }
+        }
+        return actual;
+    }
     private String inOrden(Node<T> current){
         String str="";
         if(current.getLeftNode() != null) str += inOrden(current.getLeftNode());
