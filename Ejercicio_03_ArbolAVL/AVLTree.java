@@ -129,6 +129,10 @@ public class AVLTree <T extends Comparable<T>>{
                 return current;
         }
     }
+    //Metodo Publico (remove)
+    public void remove(T x) throws ItemNotFound{
+        this.root=removeAVL(this.root,x);
+    }
     //Metodo Protegido (remove)
     protected Node<T> removeAVL(Node<T> actual,T x) throws ItemNotFound{        
         //si es nulo, no existe el dato
