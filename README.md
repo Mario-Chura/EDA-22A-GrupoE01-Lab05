@@ -368,3 +368,4 @@
 -   https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
 -   https://www.youtube.com/watch?v=Qexq1k8LB6k&ab_channel=makigas%3Atutorialesdeprogramaci%C3%B3n
 -   https://estructurasite.wordpress.com/arbol/
+-   https://www.geeksforgeeks.org/avl-tree-set-2-deletion/
