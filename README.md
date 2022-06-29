@@ -287,7 +287,65 @@
         else if(resC>0)	return searchNode(x, current.getLeftNode());
         else	return current;
 	```
-- Para la mostrar en consola se implemento un metodo para el recorrido del arbol AVL en inOrden, y se uso en el metodo toString
+- Para el metodo remove se trabajo igualmente con uno publico y otro protegido en el cual se realiza el desarrollo, trabajando de manera similar como en los metodos insert y search con una variable entera que compara el dato a eliminar con el dato del nodo.
+- Se hizo uso de condicionales con esta variable segun sea menor a mayor a cero trabajando por la derecha o izquierda y aplicando recursividad.
+- Luego se trabaja con los casos para la eliminacion, asimismo buscando y trabajando con predecesor.
+	```sh
+	//Nodo con un unico hijo o es hoja
+            if ((actual.getLeftNode() == null) || (actual.getRightNode() == null)){
+                Node<T> temp = null;
+                if (temp == actual.getLeftNode()) {
+                    temp = actual.getRightNode();
+                }else {
+                    temp = actual.getLeftNode();
+                }
+ 
+                // Caso que no tiene hijos
+                if (temp == null) {
+                    actual = null;//Se elimina dejandolo en null
+                }else{
+                //Caso con un hijo
+                    actual = temp;//Elimina el valor actual reemplazandolo por su hijo
+                }
+            }
+            else {
+                //Nodo con dos hijos, se busca el predecesor
+                Node<T> temp = getNodoMaximo(actual.getLeftNode());
+                
+                //Se copia el dato del predecesor
+                actual.setData(temp.getData());
+ 
+                //Se elimina el predecesor
+                actual.setLeftNode(removeAVL(actual.getLeftNode(),temp.getData()));
+            }
+	```
+- Para mostrar en consola se implemento un metodo para el recorrido del arbol AVL en inOrden, y se uso en el metodo toString
+- Resultados en Consola
+	```sh
+	*Inserta: 50
+	50[0], 
+	*Inserta: 30
+	30[0], 50[-1], 
+	*Inserta: 70
+	30[0], 50[0], 70[0], 
+	*Inserta: 65
+	30[0], 50[1], 65[0], 70[-1], 
+	*Inserta: 68
+	Rotacion Doble Derecha
+	30[0], 50[1], 65[0], 68[0], 70[0], 
+	*Inserta: 45
+	30[1], 45[0], 50[0], 65[0], 68[0], 70[0], 
+	*Inserta: 64
+	30[1], 45[0], 50[1], 64[0], 65[-1], 68[-1], 70[0], 
+	*Inserta: 63
+	Rotacion Simple Derecha
+	30[1], 45[0], 50[1], 63[0], 64[0], 65[0], 68[-1], 70[0], 
+	Dato: 63
+	Remove: 65
+	30[1], 45[0], 50[1], 63[0], 64[0], 68[-1], 70[0], 
+	Remove: 68
+	30[1], 45[0], 50[1], 63[0], 64[-1], 70[0], 
+	```
 #
 
 ### II.	SOLUCIÓN DEL CUESTIONARIO
